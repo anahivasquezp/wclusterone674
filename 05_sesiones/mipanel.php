@@ -1,10 +1,15 @@
 <?php
 session_start();
-if($_POST["nombre"] != "" && $_POST["clave"]!= ""){
+
+
+if(isset($_POST["nombre"]) && isset($_POST["clave"])){
     $_SESSION["nombre"] = $_POST["nombre"];
     $_SESSION["clave"] = $_POST["clave"];
 }else{
-    header("Location: index.php");
+    if(!isset($_SESSION["nombre"]) || !issest(SESSION["clave"])){
+        header("Location: index.php");
+    }
+    
 }
 
 
