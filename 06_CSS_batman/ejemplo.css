@@ -1,0 +1,71 @@
+ /******* CONFIGURACION BODY *****/
+ body{margin:0px auto;  font-family: Verdana, Tahoma, sans-serif;}
+ /*{border: 1px solid red;}*/
+ /**colores***/
+ .t-primario{color:#138daa}
+ .t-secundario{color:#22efd1}
+ .t-terciario{color: #0B3AB8}
+ .t-rojo{color:#f00;}
+ .t-blanco{color: #fff}
+ .t-gris{color:#888}
+
+ .bg-primario{background:#138daa}
+ .bg-secundario{background:#22efd1}
+ .bg-terciario{background: #0B3AB8}
+ .bg-rojo{background:#f00;}
+ .bg-blanco{background: #fff}
+ .bg-gris{background:#888}
+ 
+ /**** HEADER *****/
+ .header{height: 100px;}
+ .header img{margin-top: 10px; margin-left: 10px; width: 80px; height: 80px;}
+ #titulo{font-size: 32px;color: #fff;display:inline-block;}
+ /*Formulario login*/
+ #login{display:inline; float:right; margin-top: 30px; margin-right: 30px; color:#ffffff}
+ /******* barra *****/
+ .barra{
+     text-align: center;
+     padding:4px; 
+     background-image: url("imagenes/degradado.png");
+     background-repeat: repeat-x;
+    }
+ .barra ul {list-style-type: none; margin:0px;}
+ .barra ul li{
+     display: inline-block;
+     width: 10%;
+     padding: 5px 10px;
+     /*border: 1px solid #000;*/
+     color: #138daa;
+ }
+ .barra ul li a{text-decoration: none; color:#138daa}
+ /******* CARD SUPERHEROE ********/
+ section {text-align: center; width: 100%;}
+ section .card{
+     font-family: Verdana, Tahoma, sans-serif;
+     font-size: 16px;
+     border:1px solid #AAAAAA; 
+     float:left; 
+     margin-left:30px;
+     width:250px; 
+     margin-top: 30px;
+     border-radius: 0px 0px 8px 8px;
+ }
+ /* Imagen ajustada al tamaño de la caja padre*/
+.imagen-superheroe {width:250px; height: 250px;}
+.imagen-superheroe img{width: auto; height: 100%;}
+
+.titulo_item{font-family: Tahoma; font-weight: bold; padding-bottom: 10px;}
+.disponible{font-size: 10px;}
+.precio{padding:20px 0px; font-size: 25px;}
+.add-button{
+    clear: both;
+    background-color: #138daa;
+    border-radius: 4px; 
+    padding: 5px 0px;
+    margin: 10px 40px;
+    text-align: center;
+ }
+ .add-button a{ text-decoration: none; display: block; font-weight: bold; color:#fff;}
+ 
+ 
+ 
