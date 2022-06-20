@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Selectores JS</h1>
+    <p id="mielemento">Párrafo con id='mielemento'</p>
+    <span class="miclase">SPAN</span>
+    <p class="miclase">Párrafo con class="miclase"</p>
+
+    <h2>DIC con tres párrafos</h2>
+    <div id="principal">
+        <p>Parrafo 1</p>
+        <p>Parrafo 2</p>
+        <p>Parrafo 3</p>
+    </div>
+    <script>
+        //******** SELECTORES ********
+        //Obtener Elemento por su Id (getElementById)
+        var elemento = document.getElementById('mielemento');
+        console.log("Elemneto por ID: " + elemento.textContent);
+        console.log("****************************");
+
+        //Obtener Elementos por su nombre etiqueta (getElementByTagName)
+        var elementos = document.getElementsByTagName("p");
+        console.log("Nume elements:" + elementos.length);
+        for(var i= 0; i < elementos.length; i++){
+            console.log("["+i+"] :"+ elementos[i].textContent);
+        }
+        console.log("****************************");
+        
+        //Obtener Elementos por su nombre clase (getElementByClassName)
+        var elementosPorClase =  document.getElementsByClassName("miclase");
+        console.log("Nume elements:" + elementosPorClase.length);
+        for(var i= 0; i < elementosPorClase.length; i++){
+            console.log("["+i+"] :"+ elementosPorClase[i].textContent);
+        }
+        console.log("****************************");
+
+        //Obtener primer elemento (querySelector)
+        var elementsP =  document.querySelector("#principal p");
+        console.log("Nume elements:" + elementsP.textContent);
+        console.log("****************************");
+
+        //Obtener elementos con querySelectorAll
+        var elementsAll =document.querySelectorAll("#principal p");
+        console.log("Nume elements:" + elementsAll.length);
+        for(var i= 0; i < elementsAll.length; i++){
+            console.log("["+i+"] :"+ elementsAll[i].textContent);
+        }
+        console.log("****************************");
+
+
+
+
+        
+
+    </script>
+</body>
+</html>
