@@ -1,0 +1,25 @@
+body{font-family: Arial, Helvetica, sans-serif;}
+@font-face{
+    font-family:countrysearch;
+    font-style:normal;
+    font-weight: normal;
+    src: url(../fonts/new_zelek_[allfont.es].ttf);
+}
+#logo {
+    color:white;
+    text-align: center;
+    font-family: countrysearch;
+    padding: 10px;
+    margin-left: 30px;
+}
+.input_buscar{
+    height: 54px;
+    background-color: #edeff1;
+    font-size: 1.5em;
+    border: 1px solid #d4d7d9;
+}
+.fila_busqueda{ margin-top: 10px;}
+.cajita{
+    display: inline-block;
+    margin-left: 10px;
+}
