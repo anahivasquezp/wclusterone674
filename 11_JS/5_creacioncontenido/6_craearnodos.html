@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objetivo:</h1>
+    <p>Crear un párrafo dentro de un DIV de manera dinámica</p>
+
+    <div id="contenedor"></div>
+    <button onclick="crearContenido();">Crear</button>
+    <button onclick="removerContenido();">Eiminar</button>
+
+    <script>
+        function crearContenido(){
+            var parrafo = document.createElement("p");
+            parrafo.setAttribute("id","ID");
+
+            var texto= document.createTextNode("Texto creado dinámicamente");
+
+            parrafo.appendChild(texto);
+            document.getElementById("contenedor").appendChild(parrafo);
+
+        }
+        function removerContenido(){
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>este es un parrafo</p>
+    <div>
+        <p>Parrafo dentro de DIV</p>
+        <!-- comentario-->
+    </div>
+
+    <script>
+        function recursivas (nodo){
+            var arrayNodos = nodo.childNodes;
+            arrayNodos.forEach(element => {
+                console.log("=======================");
+                console.log("Nodo "+ element.nodeName + " de tipo " + element.nodeType + " con valor " + element.nodeValue);
+                console.log("Nodo padre: " + element.parentNode);
+                
+                if(element.hasChildNodes()){
+                    recursivas (element);
+                }
+            });
+            
+
+        }
+        recursivas(document.body);
+    </script>
+</body>
+</html>
