@@ -7,6 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<form method="post" action="../LoginController">
+		<fieldset>
+		<p>Name:</p>
+		<input type="text" name="txtNombre" placeholder="Your username">
+		<p>Password:</p>
+		<input type="password" name="txtClave">
+		<br>
+		<br>
+		<input type="submit" value="Enter">
+		</fieldset>
+	</form>
 </body>
 </html>
