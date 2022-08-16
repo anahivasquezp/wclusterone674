@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <h2>Cambio de Texto usando AJAX</h2>
+    </div>
+    <button onclick="cargarDatos();">Cambiar Contenido</button>
+
+    <script>
+        function cargarDatos(){
+            //1.- Instanciar un objeto de la clase
+            var ajaxObj = new XMLHttpRequest();
+            //2.- Configurar la solicitud
+            ajaxObj.open("GET","fichero.txt", true);
+            //3.- Reviso cambio de estado y 
+            //cuando esté en 4, uso el texto enviado
+            ajaxObj.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status==200){
+                    console.log(this.responseText);
+                }
+            }
+            //4.- Enviar
+            ajaxObj.send();
+
+
+
+        }
+    </script>
+</body>
+</html>
