@@ -27,8 +27,6 @@ public class Persona implements Serializable{
 		
 	}
 	public Persona( String nombre, String password) {
-		super();
-		this.id = id;
 		this.nombre = nombre;
 		this.password = password;
 	}
