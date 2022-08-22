@@ -6,10 +6,10 @@ import javax.persistence.Persistence;
 public class TestJPA {
 
 	public static void main(String[] args) {
+		
 		EntityManager em = Persistence.createEntityManagerFactory("personajpa").createEntityManager();
-		
-		
-		Persona p = new Persona("Nicole", "nicole123");
+				
+		Persona p = new Persona("Federico", "federico123");
 		
 		em.getTransaction().begin();
 		em.persist(p);

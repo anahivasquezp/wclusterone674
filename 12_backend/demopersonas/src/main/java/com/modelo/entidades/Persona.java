@@ -1,62 +1,79 @@
 package com.modelo.entidades;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.Serializable;
 
-import com.modelo.conexion.ConexionBDD;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-/**
- * @author CI
- * @version 1.0
- * @created 08-ago-2022 16:26:04
- */
-public class Persona {
 
+@Entity (name = "Personna")
+public class Persona implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
+	@Column (name= "per_nombre")
 	private String nombre;
+	
+	@Column (name= "per_clave")
 	private String password;
-
+	
+	//Pequeña Base de datos
+	//private static List<Persona> personas = null;
+	
+	
 	public Persona() {
+		
+	}	
 
+	public Persona(String nombre, String password) {
+		this.nombre = nombre;
+		this.password = password;
 	}
+
 
 	public int getId() {
 		return id;
 	}
 
-	/**
-	 * 
-	 * @param newVal
-	 */
-	public void setId(int newVal) {
-		id = newVal;
+
+	public void setId(int id) {
+		this.id = id;
 	}
+
 
 	public String getNombre() {
 		return nombre;
 	}
 
-	/**
-	 * 
-	 * @param newVal
-	 */
-	public void setNombre(String newVal) {
-		nombre = newVal;
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
+
 
 	public String getPassword() {
 		return password;
 	}
 
-	/**
-	 * 
-	 * @param newVal
-	 */
-	public void setPassword(String newVal) {
-		password = newVal;
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.id+" - "+this.nombre+" - "+this.password;
+	}
+	
+	
+
 }
+
